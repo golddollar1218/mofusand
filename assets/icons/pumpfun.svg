@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="pump.fun">
+  <!-- outer dark outline -->
+  <path d="M32 4c8.837 0 16 7.163 16 16v24c0 8.837-7.163 16-16 16s-16-7.163-16-16V20C16 11.163 23.163 4 32 4z" fill="#0B3B2D"/>
+  <!-- white top half -->
+  <path d="M32 7c7.18 0 13 5.82 13 13v12H19V20c0-7.18 5.82-13 13-13z" fill="#FFFFFF"/>
+  <!-- mint bottom half -->
+  <path d="M19 32h26v12c0 7.18-5.82 13-13 13s-13-5.82-13-13V32z" fill="#86EFAC"/>
+  <!-- seam -->
+  <rect x="19" y="30.5" width="26" height="3" fill="#0B3B2D"/>
+  <!-- inner highlight -->
+  <path d="M25 12c1.5-1 3.5-1.5 7-1.5" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.55"/>
+  <!-- bottom gloss -->
+  <path d="M24 48c2 3 5.5 5 8 5" stroke="#BBF7D0" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+</svg>

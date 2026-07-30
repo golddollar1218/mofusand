@@ -426,6 +426,19 @@ button {
   vertical-align: -0.15em;
 }
 
+.pump-logo {
+  width: 1.25em !important;
+  height: 1.25em !important;
+  border-radius: 0.2em;
+  background: transparent;
+  object-fit: contain;
+}
+
+.social-tile .pump-logo {
+  width: 28px !important;
+  height: 28px !important;
+}
+
 .section h2 {
   margin: 0 0 0.75rem;
   font-family: var(--font-jp);
