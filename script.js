@@ -55,7 +55,7 @@
   });
 
   const revealTargets = document.querySelectorAll(
-    ".about .section-inner, .gallery .section-inner, .join-panel, .traits li, .gallery-item"
+    ".about .section-inner, .howtobuy .section-inner, .tokenomics .section-inner, .gallery .section-inner, .join-panel, .traits li, .buy-card, .token-card, .gallery-item"
   );
 
   revealTargets.forEach((el, i) => {
@@ -76,4 +76,35 @@
   );
 
   revealTargets.forEach((el) => observer.observe(el));
+
+  const copyBtn = document.getElementById("copy-ca");
+  const caAddress = document.getElementById("ca-address");
+
+  copyBtn?.addEventListener("click", async () => {
+    const value =
+      copyBtn.dataset.ca ||
+      caAddress?.textContent?.trim() ||
+      "";
+    if (!value) return;
+
+    try {
+      await navigator.clipboard.writeText(value);
+    } catch {
+      const range = document.createRange();
+      range.selectNodeContents(caAddress);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      document.execCommand("copy");
+      selection.removeAllRanges();
+    }
+
+    const prev = copyBtn.textContent;
+    copyBtn.textContent = "Copied!";
+    copyBtn.classList.add("is-copied");
+    setTimeout(() => {
+      copyBtn.textContent = prev;
+      copyBtn.classList.remove("is-copied");
+    }, 1600);
+  });
 })();

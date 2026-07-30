@@ -166,12 +166,13 @@ button {
 }
 
 .brand-jp {
-  font-family: var(--font-jp);
-  font-weight: 800;
+  font-family: var(--font-en);
+  font-weight: 700;
   font-size: 1.05rem;
 }
 
 .brand-ticker {
+  font-family: var(--font-jp);
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--red);
@@ -356,13 +357,14 @@ button {
 }
 
 .hero-jp {
-  font-family: var(--font-jp);
-  font-weight: 800;
+  font-family: var(--font-en);
+  font-weight: 700;
   font-size: clamp(2.8rem, 10vw, 4.6rem);
   text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.35);
 }
 
 .hero-en {
+  font-family: var(--font-jp);
   font-size: clamp(1.45rem, 4.5vw, 2.1rem);
   font-weight: 700;
   color: var(--yellow);
@@ -505,12 +507,184 @@ button {
   place-items: center;
   background: var(--white);
   box-shadow: 2px 2px 0 var(--ink);
+  font-weight: 800;
+  font-size: 1.15rem;
 }
 
 .trait-icon .emoji {
   width: 32px;
   height: 32px;
   vertical-align: 0;
+}
+
+/* How to Buy */
+.howtobuy {
+  background:
+    linear-gradient(160deg, rgba(255, 248, 231, 0.7), rgba(197, 235, 248, 0.55)),
+    radial-gradient(circle at 20% 80%, rgba(255, 143, 171, 0.3), transparent 40%);
+}
+
+.buy-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.buy-card {
+  padding: 1.25rem 1.2rem;
+  border: var(--outline);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.buy-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.step-num {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 2px solid var(--ink);
+  background: var(--yellow);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.buy-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+}
+
+.buy-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.howto-cta {
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+/* Tokenomics */
+.tokenomics {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255, 224, 102, 0.35), transparent 40%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.25), rgba(197, 235, 248, 0.45));
+}
+
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+}
+
+.token-card {
+  padding: 1.2rem 1.1rem;
+  border: var(--outline);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.token-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.token-card-wide {
+  grid-column: 1 / -1;
+}
+
+.token-card-ca {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.token-card-ca .token-label {
+  margin-bottom: 0.75rem;
+  width: 100%;
+  text-align: center;
+}
+
+.ca-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.token-label {
+  margin: 0 0 0.3rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.token-value {
+  margin: 0 0 0.3rem;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.token-ca {
+  margin: 0;
+  font-size: clamp(0.95rem, 2.8vw, 1.25rem);
+  word-break: break-all;
+  max-width: min(100%, 28rem);
+  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
+  font-weight: 700;
+  text-align: center;
+}
+
+.btn-copy {
+  flex-shrink: 0;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  border: var(--outline);
+  background: var(--yellow);
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 0.9rem;
+  box-shadow: 2px 2px 0 var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn-copy:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
+  background: #ffe566;
+}
+
+.btn-copy:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+.btn-copy.is-copied {
+  background: #7ddea0;
+}
+
+.token-note {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
 }
 
 /* Gallery */
@@ -581,6 +755,8 @@ button {
   border-radius: 50%;
   border: 3px solid var(--ink);
   box-shadow: 3px 3px 0 var(--ink);
+  object-fit: contain;
+  background: #fffaf5;
 }
 
 .join-links {
@@ -650,7 +826,8 @@ button {
   height: 40px;
   border-radius: 50%;
   border: 2px solid var(--cloud);
-  object-fit: cover;
+  object-fit: contain;
+  background: #fffaf5;
 }
 
 .footer-brand strong {
@@ -754,6 +931,20 @@ button {
     padding: 0;
   }
 
+  .buy-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem;
+  }
+
+  .token-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .token-card-wide,
+  .token-card-ca {
+    grid-column: 1 / -1;
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.15rem;
@@ -767,6 +958,12 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 980px) {
+  .buy-steps {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
